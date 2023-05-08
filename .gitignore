@@ -35,7 +35,17 @@ msbuild.wrn
 
 # Visual Studio 2017
 .vs/
-DataLayer/DB/db_log.ldf
+
+# Compiled Source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Terraform
+.terraform
 
 
 
