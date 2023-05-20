@@ -1,10 +1,22 @@
 provider "azurerm" {   
   features {}
 }
+
+terraform {   
+  backend "azurerm" {
+    resource_group_name = "terraform_resourceGroup_blobstore"
+    storage_account_name = "terraformstorageaccdemo"
+    container_name = "tfdemostate"
+    key = "terraformt.tfstate"
+  }
+  
+}
+
 resource "azurerm_resource_group" "terraform_demo" {
   name = "terraform_rg_demo"
   location = "Norway East"
 }
+
 resource "azurerm_container_group" "terraform_cg_demo"{
   name = "weatherapi"
   location = azurerm_resource_group.terraform_demo.location
