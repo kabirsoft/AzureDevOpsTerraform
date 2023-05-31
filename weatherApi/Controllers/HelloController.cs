@@ -10,7 +10,7 @@ namespace weatherApi.Controllers
         [HttpGet]
         public ActionResult<string> Get()
         {
-            return "Hi how r u?";
+            return "Welcome to Terraform demo";
         }
     }
 }
